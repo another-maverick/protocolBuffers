@@ -1,0 +1,11 @@
+syntax = "proto3";
+package protocolBuffers;
+
+message User {
+	string firstname = 1;
+	string lastname = 2;
+	int32 id = 3;
+	string city = 4;
+}
+
+
