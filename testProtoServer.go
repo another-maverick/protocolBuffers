@@ -1,9 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"github.com/golang/protobuf/proto"
-	pb "github.com/another-maverick/protocolBuffers"
+	pb "github.com/another-maverick/protocolBuffers/testProtocolBuffer"
 
 )
 
@@ -27,6 +28,7 @@ func testHandler(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 	res.Header().Set("Content-Type", "application/x-protobuf")
+	fmt.Println(string(body))
 	res.Write(body)
 }
 
